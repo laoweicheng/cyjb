@@ -1,0 +1,6 @@
+echo -请输入密码后回车，密码输入时不会显示。-
+defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist LastUpdatesAvailable 0
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate.plist LastRecommendedUpdatesAvailable 0
+sudo defaults delete /Library/Preferences/com.apple.SoftwareUpdate.plist RecommendedUpdates
+killall Dock
